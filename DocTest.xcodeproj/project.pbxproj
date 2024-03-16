@@ -11,6 +11,15 @@
 		11F330FD2BA5B9DC00AC058E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F330FC2BA5B9DC00AC058E /* ContentView.swift */; };
 		11F330FF2BA5B9DD00AC058E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F330FE2BA5B9DD00AC058E /* Assets.xcassets */; };
 		11F331022BA5B9DD00AC058E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F331012BA5B9DD00AC058E /* Preview Assets.xcassets */; };
+		11F331092BA5CDAD00AC058E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */; };
+		11F3310F2BA5CE5A00AC058E /* DoctorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3310E2BA5CE5A00AC058E /* DoctorCardView.swift */; };
+		11F331122BA5D19200AC058E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331112BA5D19200AC058E /* NetworkService.swift */; };
+		11F3311B2BA5D88B00AC058E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3311A2BA5D88B00AC058E /* MainView.swift */; };
+		11F3311D2BA5D89600AC058E /* VisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3311C2BA5D89600AC058E /* VisitView.swift */; };
+		11F3311F2BA5D8AE00AC058E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3311E2BA5D8AE00AC058E /* ChatView.swift */; };
+		11F331212BA5D8B600AC058E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331202BA5D8B600AC058E /* ProfileView.swift */; };
+		11F331262BA6072F00AC058E /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331252BA6072F00AC058E /* DoctorDetailView.swift */; };
+		11F331282BA624E300AC058E /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331272BA624E300AC058E /* PriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		11F330FC2BA5B9DC00AC058E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11F330FE2BA5B9DD00AC058E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F331012BA5B9DD00AC058E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		11F3310E2BA5CE5A00AC058E /* DoctorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCardView.swift; sourceTree = "<group>"; };
+		11F331112BA5D19200AC058E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		11F3311A2BA5D88B00AC058E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		11F3311C2BA5D89600AC058E /* VisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitView.swift; sourceTree = "<group>"; };
+		11F3311E2BA5D8AE00AC058E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		11F331202BA5D8B600AC058E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		11F331252BA6072F00AC058E /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
+		11F331272BA624E300AC058E /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +71,11 @@
 			children = (
 				11F330FA2BA5B9DC00AC058E /* DocTestApp.swift */,
 				11F330FC2BA5B9DC00AC058E /* ContentView.swift */,
-				11F330FE2BA5B9DD00AC058E /* Assets.xcassets */,
+				11F331132BA5D63B00AC058E /* MainScreen */,
+				11F331142BA5D68400AC058E /* Visits */,
+				11F331152BA5D68F00AC058E /* Chat */,
+				11F331162BA5D69D00AC058E /* Profile */,
+				11F331102BA5D16200AC058E /* Service */,
 				11F331002BA5B9DD00AC058E /* Preview Content */,
 			);
 			path = DocTest;
@@ -65,6 +87,83 @@
 				11F331012BA5B9DD00AC058E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11F331102BA5D16200AC058E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				11F331112BA5D19200AC058E /* NetworkService.swift */,
+				11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */,
+				11F330FE2BA5B9DD00AC058E /* Assets.xcassets */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		11F331132BA5D63B00AC058E /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				11F331172BA5D71E00AC058E /* Model */,
+				11F331182BA5D72600AC058E /* View */,
+				11F331192BA5D72C00AC058E /* ViewModel */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		11F331142BA5D68400AC058E /* Visits */ = {
+			isa = PBXGroup;
+			children = (
+				11F3311C2BA5D89600AC058E /* VisitView.swift */,
+			);
+			path = Visits;
+			sourceTree = "<group>";
+		};
+		11F331152BA5D68F00AC058E /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				11F3311E2BA5D8AE00AC058E /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		11F331162BA5D69D00AC058E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				11F331202BA5D8B600AC058E /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		11F331172BA5D71E00AC058E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11F331182BA5D72600AC058E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11F331242BA5F88E00AC058E /* Components */,
+				11F3311A2BA5D88B00AC058E /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11F331192BA5D72C00AC058E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11F331242BA5F88E00AC058E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				11F3310E2BA5CE5A00AC058E /* DoctorCardView.swift */,
+				11F331252BA6072F00AC058E /* DoctorDetailView.swift */,
+				11F331272BA624E300AC058E /* PriceView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +236,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F3311D2BA5D89600AC058E /* VisitView.swift in Sources */,
+				11F331212BA5D8B600AC058E /* ProfileView.swift in Sources */,
+				11F3311B2BA5D88B00AC058E /* MainView.swift in Sources */,
+				11F331282BA624E300AC058E /* PriceView.swift in Sources */,
+				11F331122BA5D19200AC058E /* NetworkService.swift in Sources */,
 				11F330FD2BA5B9DC00AC058E /* ContentView.swift in Sources */,
+				11F3311F2BA5D8AE00AC058E /* ChatView.swift in Sources */,
 				11F330FB2BA5B9DC00AC058E /* DocTestApp.swift in Sources */,
+				11F331092BA5CDAD00AC058E /* LaunchScreenView.swift in Sources */,
+				11F331262BA6072F00AC058E /* DoctorDetailView.swift in Sources */,
+				11F3310F2BA5CE5A00AC058E /* DoctorCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +395,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com-tsomuk.DocTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,6 +428,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com-tsomuk.DocTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

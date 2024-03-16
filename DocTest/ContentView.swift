@@ -8,14 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let tabBarAppeareance = UITabBarAppearance()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+//           MainView()
+            DoctorCardView() // Временно
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Главная")
+                }
+//            VisitView()
+            DoctorDetailView() // Временно
+                .tabItem {
+                    Image(systemName: "calendar.badge.plus")
+                    Text("Приемы")
+                }
+//            ChatView()
+            PriceView()
+                .tabItem {
+                    Image(systemName: "message.badge.filled.fill")
+                    Text("Чат")
+                }
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Профиль")
+                }
         }
-        .padding()
+        .toolbarBackground(.black, for: .tabBar)
     }
 }
 
