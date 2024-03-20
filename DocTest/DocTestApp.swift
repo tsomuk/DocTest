@@ -11,7 +11,7 @@ import SwiftUI
 struct DocTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchScreenView()
                 .preferredColorScheme(.light)
         }
     }

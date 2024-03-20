@@ -8,79 +8,80 @@
 import SwiftUI
 
 struct DoctorCardView: View {
-    
-    
-    func getRaiting(raiting: Int) -> String {
-        switch raiting {
-        case 1:
-            return "􀋃"
-        case 2:
-            return "􀋃􀋃"
-        case 3:
-            return "􀋃􀋃􀋃"
-        case 4:
-            return "􀋃􀋃􀋃􀋃"
-        case 5:
-            return "􀋃􀋃􀋃􀋃􀋃"
-        default:
-            fatalError("invalid rating")
-        }
-    }
-    
+    let surname: String
+    let name: String
+    let patronymic: String
+    let speciality: String
+    let expYears: Int
+    let price: Int
+    let rating: Int
+    @State var isFavorite = false
     
     var body: some View {
         
-        
-        
-        ZStack(content: {
-            Color.background.edgesIgnoringSafeArea(.all)
+        ZStack{
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color.white)
-                .frame(width: UIScreen.main.bounds.width - 32, height: 225, alignment: .center)
-            VStack {
+                .frame(width: UIScreen.main.bounds.width - 32, height: 225)
+            VStack(spacing: 8) {
                 HStack(alignment: .top) {
                     Image(.mockPhoto)
                         .resizable()
                         .frame(width: 50, height: 50)
                         .cornerRadius(25)
-                    VStack(alignment: .leading) {
-                        Text("Фамилия")
-                            .font(.system(size: 22, weight: .bold))
-                        Text("Имя Отчество")
-                            .font(.system(size: 22, weight: .bold))
-                        Text("⭐️⭐️⭐️⭐️⭐️")
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("\(surname)\n\(name) \(patronymic)")
+                            .font(.system(size: 16, weight: .semibold))
+                            .lineLimit(3)
+                        
+                        RatingView(rating: rating)
+                        
                         HStack {
-                            Text("Педиатор •")
-                            Text("Стаж 9 лет")
+                            Text(speciality + " •")
+                            Text("Стаж \(expYears) лет")
                         } .foregroundColor(.gray)
-                        Text("от 400 ₽")
-                            .font(.title2)
-                            .bold()
+                            .font(.system(size: 14))
+                        
+                        Text("от \(price) ₽")
+                            .font(.system(size: 16, weight: .semibold))
+                            
                     }
-                    Button("💜") {
-                        print("favorite")
+                    Spacer()
+                    Button(action: {
+                        isFavorite.toggle()
+                    }) {
+                        Image(systemName: isFavorite ? "heart.fill" : "heart")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .aspectRatio(contentMode: .fit)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.accent)
+                            
                     }
-                }
-                Button(action: {
-                    print("Make an apointment")
-                }) {
-                    RoundedRectangle(cornerRadius: 15)
-                        .fill(Color(.accent))
-                        .frame(width: 300, height: 60, alignment: .center)
-                        .overlay(
-                            Text("Записаться"))
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
+                } .padding(.horizontal, 32)
+                
+                NavigationLink(destination: DoctorDetailView().toolbarRole(.editor)) {
+                    DefaultButtonView(buttonTitle: "Записаться")
+                        
                 }
             }
-        })
+        }
     }
-    
 }
 
 struct DoctorCardView_Previews: PreviewProvider {
     static var previews: some View {
-        DoctorCardView()
-            .previewLayout(.sizeThatFits)
+        DoctorCardView(
+            surname: "Иванова",
+            name: "Марина",
+            patronymic: "Викторовна",
+            speciality: "Педиатр",
+            expYears: 7,
+            price: 450,
+            rating: 5
+        )
+        .previewLayout(.sizeThatFits)
     }
 }
+
+

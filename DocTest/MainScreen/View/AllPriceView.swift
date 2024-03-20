@@ -7,25 +7,24 @@
 
 import SwiftUI
 
-struct PriceView: View {
+struct AllPriceView: View {
     var body: some View {
         ZStack {
             Color.background.edgesIgnoringSafeArea(.all)
             
-            VStack {
+            VStack(spacing: 24) {
                 PriceSegment(title: "Видеоконсультация", time: "30 мин", price: "600 ₽")
                 PriceSegment(title: "Чат с врачем", time: "30 мин", price: "600 ₽")
                 PriceSegment(title: "Прием в клинике", time: "В клинике", price: "600 ₽")
                 Spacer()
-            }
-            
+            } .padding(16)
+                .navigationBarTitle("Стоимость услуг", displayMode: .inline)
         }
     }
 }
 
-
 #Preview {
-    PriceView()
+    AllPriceView()
 }
 
 struct PriceSegment: View {

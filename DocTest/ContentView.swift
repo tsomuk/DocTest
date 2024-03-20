@@ -12,32 +12,34 @@ struct ContentView: View {
     let tabBarAppeareance = UITabBarAppearance()
     
     var body: some View {
-        TabView {
-//           MainView()
-            DoctorCardView() // Временно
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Главная")
+        NavigationView {
+            TabView {
+                Group {
+                    DoctorListView()
+                        .tabItem {
+                            Image(systemName: "house.fill")
+                            Text("Главная")
+                        }
+                    VisitView()
+                        .tabItem {
+                            Image(systemName: "calendar.badge.plus")
+                            Text("Приемы")
+                        }
+                    ChatView()
+                        .tabItem {
+                            Image(systemName: "message.badge.filled.fill")
+                            Text("Чат")
+                        }
+                    ProfileView()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                            Text("Профиль")
+                        }
                 }
-//            VisitView()
-            DoctorDetailView() // Временно
-                .tabItem {
-                    Image(systemName: "calendar.badge.plus")
-                    Text("Приемы")
-                }
-//            ChatView()
-            PriceView()
-                .tabItem {
-                    Image(systemName: "message.badge.filled.fill")
-                    Text("Чат")
-                }
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Профиль")
-                }
+                .toolbarBackground(.white, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
+            } .navigationBarTitle("Педиатры", displayMode: .inline)
         }
-        .toolbarBackground(.black, for: .tabBar)
     }
 }
 
