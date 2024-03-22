@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct DoctorCardView: View {
-    let surname: String
-    let name: String
-    let patronymic: String
-    let speciality: String
-    let expYears: Int
-    let price: Int
-    let rating: Int
+    
+    @State var doctor: User
     @State var isFavorite = false
     
     var body: some View {
@@ -30,19 +25,19 @@ struct DoctorCardView: View {
                         .frame(width: 50, height: 50)
                         .cornerRadius(25)
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("\(surname)\n\(name) \(patronymic)")
+                        Text("\(doctor.lastName)\n\(doctor.firstName) \(doctor.patronymic)")
                             .font(.system(size: 16, weight: .semibold))
                             .lineLimit(3)
                         
-                        RatingView(rating: rating)
+                        RatingView(rating: doctor.rank)
                         
                         HStack {
-                            Text(speciality + " •")
-                            Text("Стаж \(expYears) лет")
+                            Text("Педиатр" + " •")
+                            Text("Стаж \(doctor.seniority) лет")
                         } .foregroundColor(.gray)
                             .font(.system(size: 14))
                         
-                        Text("от \(price) ₽")
+                        Text("от \(doctor.videoChatPrice) ₽")
                             .font(.system(size: 16, weight: .semibold))
                             
                     }
@@ -68,19 +63,12 @@ struct DoctorCardView: View {
     }
 }
 
-struct DoctorCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        DoctorCardView(
-            surname: "Иванова",
-            name: "Марина",
-            patronymic: "Викторовна",
-            speciality: "Педиатр",
-            expYears: 7,
-            price: 450,
-            rating: 5
-        )
-        .previewLayout(.sizeThatFits)
-    }
-}
+//struct DoctorCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DoctorCardView(doctor)
+//
+//        .previewLayout(.sizeThatFits)
+//    }
+//}
 
 

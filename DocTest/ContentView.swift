@@ -17,7 +17,7 @@ struct ContentView: View {
         NavigationView {
             TabView(selection: $selection) {
                 Group {
-                    DoctorListView()
+                    DoctorListBuilder.create()
                         .tabItem {
                             Image(systemName: "house.fill")
                             Text("Главная")
