@@ -29,31 +29,3 @@ struct AllPriceView: View {
 //#Preview {
 //    AllPriceView()
 //}
-
-struct PriceSegment: View {
-    
-    let title: String
-    let time: String
-    let price: String
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(title)
-                .bold()
-            
-            RoundedRectangle(cornerRadius: 8)
-                .frame(width: UIScreen.main.bounds.width - 32, height: 56)
-                .foregroundColor(.white)
-                .overlay {
-                    HStack {
-                        Text(time)
-                        Spacer()
-                        Text(price)
-                            .bold()
-                    }
-                    .padding(.horizontal, 16)
-                }
-        }
-        .padding(.horizontal, 16)
-    }
-}

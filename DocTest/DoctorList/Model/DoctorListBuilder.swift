@@ -10,7 +10,6 @@ import SwiftUI
 final class DoctorListBuilder {
     static func create() -> some View {
         let vm = DoctorListViewModel()
-        
         return DoctorListView(viewModel: vm)
     }
 }

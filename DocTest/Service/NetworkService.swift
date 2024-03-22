@@ -19,14 +19,10 @@ class NetworkService {
     }
 
     func fetchData() async throws -> Doctor {
-        print("Выполняю сетевой запрос")
         guard let url = createURL() else { throw NetworkingError.badURL }
         let response = try await URLSession.shared.data(from: url)
         let decoder = JSONDecoder()
         let result = try decoder.decode(Doctor.self, from: response.0)
-        print("Количество записей", result.record.count)
-        print("Количество юзеров", result.record.data.users.count)
-        print("Имя первого юзера", result.record.data.users[0].firstName)
         return result
     }
 }

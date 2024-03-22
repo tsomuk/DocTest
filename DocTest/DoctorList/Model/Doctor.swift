@@ -5,9 +5,6 @@
 //  Created by Nikita Tsomuk on 17.03.2024.
 //
 
-
-//   let doctor = try? JSONDecoder().decode(Doctor.self, from: jsonData)
-
 import Foundation
 
 // MARK: - Doctor
@@ -49,9 +46,8 @@ struct User: Codable {
     let rank: Int
     let rankLabel: String
     let category: Int
-    let categoryLabel: CategoryLabel
     let isFavorite: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id, slug
         case firstName = "first_name"
@@ -76,7 +72,6 @@ struct User: Codable {
         case rank
         case rankLabel = "rank_label"
         case category
-        case categoryLabel = "category_label"
         case isFavorite = "is_favorite"
     }
 }
@@ -88,7 +83,7 @@ struct AdvancedTraining: Codable {
     let endDate: Int
     let file: String
     let isModerated: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id, organization, position
         case endDate = "end_date"
@@ -97,12 +92,6 @@ struct AdvancedTraining: Codable {
     }
 }
 
-enum CategoryLabel: String, Codable {
-    case вторая = "вторая"
-    case высшая = "высшая"
-    case нет = "нет"
-    case первая = "первая"
-}
 
 // MARK: - EducationTypeLabel
 struct EducationTypeLabel: Codable {
@@ -126,7 +115,7 @@ struct HigherEducation: Codable {
     let university, specialization, qualification: String
     let startDate, endDate: Int
     let untilNow, isModerated: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id, university, specialization, qualification
         case startDate = "start_date"
@@ -142,16 +131,12 @@ struct Rating: Codable {
     let value: Double
 }
 
-
-
-
-
 // MARK: - Specialization
 struct Specialization: Codable {
     let id: Int
     let name: String
     let isModerated: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case isModerated = "is_moderated"
@@ -165,7 +150,7 @@ struct WorkExpirience: Codable {
     let startDate: Int
     let endDate: Int?
     let untilNow, isModerated: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id, organization, position
         case startDate = "start_date"
@@ -178,24 +163,24 @@ struct WorkExpirience: Codable {
 // MARK: - Encode/decode helpers
 
 class JSONNull: Codable, Hashable {
-
+    
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
-
+    
     public var hashValue: Int {
         return 0
     }
-
+    
     public init() {}
-
+    
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if !container.decodeNil() {
             throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }
-
+    
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encodeNil()

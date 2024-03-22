@@ -23,7 +23,7 @@ struct ContentView: View {
                             Text("Главная")
                         }
                         .tag(0)
-                        
+                    
                     VisitView()
                         .tabItem {
                             Image(systemName: "calendar.badge.plus")
@@ -48,7 +48,6 @@ struct ContentView: View {
             }
             .navigationBarTitle(selection == 0 ? "Педиатры" : "", displayMode: .inline)
         }
-        
     }
 }
 

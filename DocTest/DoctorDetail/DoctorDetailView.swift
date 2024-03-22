@@ -13,7 +13,6 @@ struct DoctorDetailView: View {
     
     var body: some View {
         
-        
         ZStack(content: {
             Color.background.edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {
@@ -43,9 +42,9 @@ struct DoctorDetailView: View {
                         }
                     }
                     
-                        Text("\(doctor.lastName)\n\(doctor.firstName) \(doctor.patronymic)")
-                    .bold()
-                    .font(.system(size: 16, weight: .semibold))
+                    Text("\(doctor.lastName)\n\(doctor.firstName) \(doctor.patronymic)")
+                        .bold()
+                        .font(.system(size: 16, weight: .semibold))
                 } .padding(.horizontal, 16)
                 
                 VStack(alignment: .leading, spacing: 10) {
@@ -79,52 +78,3 @@ struct DoctorDetailView: View {
 //#Preview {
 //    DoctorDetailView()
 //}
-
-
-
-
-
-
-struct TitleWithImage: View {
-    let title: String
-    let imageName: String
-    
-    var body: some View {
-        HStack {
-            Image(systemName: imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 14, height: 14)
-            Text(title)
-                .font(.system(size: 14))
-        }
-        .foregroundStyle(.darkGray)
-    }
-}
-
-
-
-struct PriceView: View {
-    
-    var description: String
-    var price : Int
-    
-    
-    var body: some View {
-        RoundedRectangle(cornerRadius: 8)
-            .frame(width: UIScreen.main.bounds.width - 32, height: 60)
-            .overlay(
-                HStack {
-                    Text(description)
-                    Spacer()
-                    Text("от \(price) ₽")
-                }
-                    .font(.system(size: 16, weight: .semibold))
-                    .padding(.horizontal, 16)
-                    .foregroundColor(.black)
-            )
-        
-            .foregroundColor(.white)
-            .fontWeight(.bold)
-    }
-}
