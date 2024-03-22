@@ -51,7 +51,7 @@ struct DoctorCardView: View {
                         
                         HStack {
                             Text("Педиатр" + " •")
-                            Text("Стаж \(doctor.seniority) лет")
+                            Text(doctor.seniority.getYearsStringCard())
                         } .foregroundColor(.gray)
                             .font(.system(size: 14))
                         

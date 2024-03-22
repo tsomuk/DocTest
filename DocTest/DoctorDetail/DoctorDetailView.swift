@@ -48,7 +48,7 @@ struct DoctorDetailView: View {
                 } .padding(.horizontal, 16)
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    TitleWithImage(title: "Опыт работы \(doctor.seniority) лет", imageName: "syringe.fill")
+                    TitleWithImage(title: doctor.seniority.getYearsStringDetail(), imageName: "syringe.fill")
                     TitleWithImage(title: "Врач высшей категории", imageName: "cross.circle")
                     TitleWithImage(title: "И.М.Сеченов", imageName: "cross.vial.fill")
                     TitleWithImage(title: "Детская клиника", imageName: "pill.circle.fill")
