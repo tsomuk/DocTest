@@ -26,7 +26,7 @@ class NetworkService {
         let result = try decoder.decode(Doctor.self, from: response.0)
         print("Количество записей", result.record.count)
         print("Количество юзеров", result.record.data.users.count)
-        print("Имя первогоюзера", result.record.data.users[0].firstName)
+        print("Имя первого юзера", result.record.data.users[0].firstName)
         return result
     }
 }

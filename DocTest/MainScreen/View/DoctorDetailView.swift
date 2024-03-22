@@ -50,7 +50,7 @@ struct DoctorDetailView: View {
                 Button(action: {
                     print("Make an apointment")
                 }) {
-                    DefaultButtonView(buttonTitle: "Записаться")
+                    DefaultButtonView(buttonTitle: "Записаться", extraPadding: 0)
                 }
             }
             .navigationBarTitle("Педиатр", displayMode: .inline)

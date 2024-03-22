@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct DoctorListView: View {
-
+    
     private let networkService = NetworkService.shared
     @State var doctor: Doctor?
-//    @State var numberOfCards: Int?
-     var numberOfCards: Int = 20
+    //    @State var numberOfCards: Int?
+    var numberOfCards: Int = 20
     
     var body: some View {
         ZStack {
@@ -25,7 +25,7 @@ struct DoctorListView: View {
                             name: "\(doctor?.record.data.users[item].firstName ?? "Name")",
                             patronymic: "\(doctor?.record.data.users[item].patronymic ?? "Patronymic")",
                             speciality: "Педиатр",
-                            expYears: item,
+                            expYears: doctor?.record.data.users[item].seniority ?? 0,
                             price: doctor?.record.data.users[item].videoChatPrice ?? 0,
                             rating: doctor?.record.data.users[item].rank ?? 0
                         )
@@ -37,11 +37,27 @@ struct DoctorListView: View {
             }
             .onAppear {
                 Task {
-                   let result = try await networkService.fetchData()
+                    let result = try await networkService.fetchData()
                     self.doctor = result
-//                    self.numberOfCards = result.record.data.users.count
+                    //                    self.numberOfCards = result.record.data.users.count
                 }
             }
+        }
+    }
+    
+    func calculateExperence(startDate: Double, endDate: Double) -> Int {
+        let startDate = Date(timeIntervalSince1970: startDate)
+        let endDate = Date(timeIntervalSince1970: endDate)
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year], from: startDate, to: endDate)
+        
+        if let years = components.year {
+            print("Разница в годах: \(years)")
+            return years
+        } else {
+            print("Ошибка вычисления разницы в годах")
+            return 0
         }
     }
 }

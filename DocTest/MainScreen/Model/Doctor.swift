@@ -15,8 +15,6 @@ struct Doctor: Codable {
     let record: Record
 }
 
-
-
 // MARK: - Record
 struct Record: Codable {
     let count: Int

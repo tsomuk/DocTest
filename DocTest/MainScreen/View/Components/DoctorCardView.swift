@@ -52,8 +52,7 @@ struct DoctorCardView: View {
                     }) {
                         Image(systemName: isFavorite ? "heart.fill" : "heart")
                             .resizable()
-                            .frame(width: 24, height: 24)
-                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 20)
                             .symbolRenderingMode(.palette)
                             .foregroundStyle(.accent)
                             
@@ -61,8 +60,8 @@ struct DoctorCardView: View {
                 } .padding(.horizontal, 32)
                 
                 NavigationLink(destination: DoctorDetailView().toolbarRole(.editor)) {
-                    DefaultButtonView(buttonTitle: "Записаться")
-                        
+                    DefaultButtonView(buttonTitle: "Записаться", extraPadding: 32)
+                             
                 }
             }
         }

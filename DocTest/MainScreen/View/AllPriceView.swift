@@ -14,8 +14,8 @@ struct AllPriceView: View {
             
             VStack(spacing: 24) {
                 PriceSegment(title: "Видеоконсультация", time: "30 мин", price: "600 ₽")
-                PriceSegment(title: "Чат с врачем", time: "30 мин", price: "600 ₽")
-                PriceSegment(title: "Прием в клинике", time: "В клинике", price: "600 ₽")
+                PriceSegment(title: "Чат с врачом", time: "30 мин", price: "600 ₽")
+                PriceSegment(title: "Приём в клинике", time: "В клинике", price: "600 ₽")
                 Spacer()
             } .padding(16)
                 .navigationBarTitle("Стоимость услуг", displayMode: .inline)
