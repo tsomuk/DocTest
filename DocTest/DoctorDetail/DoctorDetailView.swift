@@ -48,10 +48,10 @@ struct DoctorDetailView: View {
                 } .padding(.horizontal, 16)
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    TitleWithImage(title: doctor.seniority.getYearsStringDetail(), imageName: "syringe.fill")
-                    TitleWithImage(title: "Врач высшей категории", imageName: "cross.circle")
-                    TitleWithImage(title: "И.М.Сеченов", imageName: "cross.vial.fill")
-                    TitleWithImage(title: "Детская клиника", imageName: "pill.circle.fill")
+                    TitleWithImage(title: doctor.seniority.getYearsStringDetail(), imageName: "clock")
+                    TitleWithImage(title: "Врач высшей категории", imageName: "cross.case")
+                    TitleWithImage(title: "1-й ММИ им. И.М.Сеченова", imageName: "graduationcap")
+                    TitleWithImage(title: "Детская клиника \"РебёнОК\"", imageName: "mappin.and.ellipse")
                     
                     NavigationLink(destination: AllPriceView(doctor: doctor).toolbarRole(.editor)) {
                         PriceView(description: "Стоимость услуг", price: doctor.textChatPrice)
