@@ -20,10 +20,28 @@ struct DoctorCardView: View {
                 .frame(width: UIScreen.main.bounds.width - 32, height: 225)
             VStack(spacing: 8) {
                 HStack(alignment: .top) {
-                    Image(.mockPhoto)
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .cornerRadius(25)
+                    AsyncImage(url: URL(string: doctor.avatar ?? "")) { phase in
+                        switch phase {
+                        case .empty:
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundStyle(.accent)
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 50, height: 50)
+                                .cornerRadius(25)
+                        case .failure:
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundStyle(.accent)
+                        @unknown default:
+                            EmptyView()
+                        }
+                    }
                     VStack(alignment: .leading, spacing: 8) {
                         Text("\(doctor.lastName)\n\(doctor.firstName) \(doctor.patronymic)")
                             .font(.system(size: 16, weight: .semibold))
@@ -37,7 +55,7 @@ struct DoctorCardView: View {
                         } .foregroundColor(.gray)
                             .font(.system(size: 14))
                         
-                        Text("от \(doctor.videoChatPrice) ₽")
+                        Text("от \(doctor.textChatPrice) ₽")
                             .font(.system(size: 16, weight: .semibold))
                             
                     }
@@ -54,9 +72,10 @@ struct DoctorCardView: View {
                     }
                 } .padding(.horizontal, 32)
                 
-                NavigationLink(destination: DoctorDetailView().toolbarRole(.editor)) {
+                NavigationLink(destination: DoctorDetailView(doctor: doctor)
+                    .toolbarRole(.editor))
+                {
                     DefaultButtonView(buttonTitle: "Записаться", extraPadding: 32)
-                             
                 }
             }
         }

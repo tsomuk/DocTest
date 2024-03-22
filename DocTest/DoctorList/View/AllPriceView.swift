@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct AllPriceView: View {
+    
+    @State var doctor: User
+    
     var body: some View {
         ZStack {
             Color.background.edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 24) {
-                PriceSegment(title: "Видеоконсультация", time: "30 мин", price: "600 ₽")
-                PriceSegment(title: "Чат с врачом", time: "30 мин", price: "600 ₽")
-                PriceSegment(title: "Приём в клинике", time: "В клинике", price: "600 ₽")
+                PriceSegment(title: "Видеоконсультация", time: "30 мин", price: "\(doctor.videoChatPrice) ₽")
+                PriceSegment(title: "Чат с врачом", time: "30 мин", price: "\(doctor.textChatPrice) ₽")
+                PriceSegment(title: "Приём в клинике", time: "В клинике", price: "\(doctor.hospitalPrice) ₽")
                 Spacer()
             } .padding(16)
                 .navigationBarTitle("Стоимость услуг", displayMode: .inline)
@@ -23,9 +26,9 @@ struct AllPriceView: View {
     }
 }
 
-#Preview {
-    AllPriceView()
-}
+//#Preview {
+//    AllPriceView()
+//}
 
 struct PriceSegment: View {
     
