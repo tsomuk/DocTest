@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1102D5202BAE38B20053B388 /* DoctorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102D51F2BAE38B20053B388 /* DoctorMock.swift */; };
 		114F0C792BA7A68000CB8AAD /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F0C782BA7A68000CB8AAD /* RatingView.swift */; };
 		115284952BADF432001FF346 /* DoctorListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284942BADF432001FF346 /* DoctorListBuilder.swift */; };
 		1152849A2BAE0876001FF346 /* PriceSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284992BAE0876001FF346 /* PriceSegment.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1102D51F2BAE38B20053B388 /* DoctorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMock.swift; sourceTree = "<group>"; };
 		114F0C782BA7A68000CB8AAD /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		115284942BADF432001FF346 /* DoctorListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListBuilder.swift; sourceTree = "<group>"; };
 		115284992BAE0876001FF346 /* PriceSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSegment.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				115284A12BAE1BFD001FF346 /* Int + Extension.swift */,
 				116F87DD2BAE31660043BAD4 /* String + Extension.swift */,
+				1102D51F2BAE38B20053B388 /* DoctorMock.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				115284952BADF432001FF346 /* DoctorListBuilder.swift in Sources */,
 				11F3311D2BA5D89600AC058E /* VisitView.swift in Sources */,
+				1102D5202BAE38B20053B388 /* DoctorMock.swift in Sources */,
 				116F87DE2BAE31660043BAD4 /* String + Extension.swift in Sources */,
 				115284A22BAE1BFD001FF346 /* Int + Extension.swift in Sources */,
 				11F3312A2BA6DA5400AC058E /* Doctor.swift in Sources */,

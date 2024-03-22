@@ -26,6 +26,6 @@ struct AllPriceView: View {
     }
 }
 
-//#Preview {
-//    AllPriceView()
-//}
+#Preview {
+    AllPriceView(doctor: DoctorMock.mrKim)
+}

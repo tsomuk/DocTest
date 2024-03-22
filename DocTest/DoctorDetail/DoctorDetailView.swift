@@ -82,6 +82,6 @@ struct DoctorDetailView: View {
     }
 }
 
-//#Preview {
-//    DoctorDetailView()
-//}
+#Preview {
+    DoctorDetailView(doctor: DoctorMock.mrKim)
+}

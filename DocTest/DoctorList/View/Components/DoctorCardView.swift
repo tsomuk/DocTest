@@ -82,12 +82,6 @@ struct DoctorCardView: View {
     
 }
 
-//struct DoctorCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DoctorCardView(doctor)
-//
-//        .previewLayout(.sizeThatFits)
-//    }
-//}
-
-
+#Preview {
+    DoctorCardView(doctor: DoctorMock.mrKim)
+}

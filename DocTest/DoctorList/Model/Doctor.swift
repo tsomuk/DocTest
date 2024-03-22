@@ -30,7 +30,7 @@ struct DataClass: Codable {
 struct User: Codable {
     let id, slug, firstName, patronymic: String
     let lastName, gender: String
-    let genderLabel: GenderLabel
+    let genderLabel: GenderLabel?
     let specialization: [Specialization]
     let ratings: [Rating]
     let ratingsRating: Double
