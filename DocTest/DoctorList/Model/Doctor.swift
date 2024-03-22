@@ -43,6 +43,7 @@ struct User: Codable {
     let higherEducation: [HigherEducation]
     let workExpirience: [WorkExpirience]
     let advancedTraining: [AdvancedTraining]
+    let scientificDegreeLabel: String
     let rank: Int
     let rankLabel: String
     let category: Int
@@ -69,6 +70,7 @@ struct User: Codable {
         case higherEducation = "higher_education"
         case workExpirience = "work_expirience"
         case advancedTraining = "advanced_training"
+        case scientificDegreeLabel = "scientific_degree_label"
         case rank
         case rankLabel = "rank_label"
         case category

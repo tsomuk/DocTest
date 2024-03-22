@@ -33,12 +33,7 @@ struct DoctorCardView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 50, height: 50)
                                 .cornerRadius(25)
-                        case .failure:
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .foregroundStyle(.accent)
-                        @unknown default:
+                         default:
                             EmptyView()
                         }
                     }
@@ -55,7 +50,7 @@ struct DoctorCardView: View {
                         } .foregroundColor(.gray)
                             .font(.system(size: 14))
                         
-                        Text("от \(doctor.textChatPrice) ₽")
+                        Text("от \(findMinimumPrice() ?? 0) ₽")
                             .font(.system(size: 16, weight: .semibold))
                             
                     }
@@ -80,6 +75,11 @@ struct DoctorCardView: View {
             }
         }
     }
+    
+    func findMinimumPrice() -> Int? {
+        [doctor.hospitalPrice, doctor.textChatPrice, doctor.videoChatPrice].min()
+    }
+    
 }
 
 //struct DoctorCardView_Previews: PreviewProvider {

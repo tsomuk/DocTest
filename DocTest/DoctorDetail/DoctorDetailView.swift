@@ -31,12 +31,7 @@ struct DoctorDetailView: View {
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(25)
-                            case .failure:
-                                Image(systemName: "person.circle.fill")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                    .foregroundStyle(.accent)
-                            @unknown default:
+                            default:
                                 EmptyView()
                             }
                         }
@@ -49,12 +44,12 @@ struct DoctorDetailView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     TitleWithImage(title: doctor.seniority.getYearsStringDetail(), imageName: "clock")
-                    TitleWithImage(title: "Врач высшей категории", imageName: "cross.case")
-                    TitleWithImage(title: "1-й ММИ им. И.М.Сеченова", imageName: "graduationcap")
+                    TitleWithImage(title: chechScientificDegreeLabel(), imageName: "cross.case")
+                    TitleWithImage(title: doctor.educationTypeLabel?.name ?? "Нет данных об образовании", imageName: "graduationcap")
                     TitleWithImage(title: "Детская клиника \"РебёнОК\"", imageName: "mappin.and.ellipse")
                     
                     NavigationLink(destination: AllPriceView(doctor: doctor).toolbarRole(.editor)) {
-                        PriceView(description: "Стоимость услуг", price: doctor.textChatPrice)
+                        PriceView(description: "Стоимость услуг", price: findMinimumPrice() ?? 0)
                     }
                     
                     Text("Проводит диагностику и лечение терапевтических больных. Осуществляет расшифровку и снятие Экг. Дает рекомендации по диетологии. Доктор имеет опыт работы в России и зарубежом. Проводит консультации пациентов на английском языке")
@@ -72,6 +67,18 @@ struct DoctorDetailView: View {
             .navigationBarTitle("Педиатр", displayMode: .inline)
             .padding(16)
         })
+    }
+    
+    func findMinimumPrice() -> Int? {
+        [doctor.hospitalPrice, doctor.textChatPrice, doctor.videoChatPrice].min()
+    }
+    
+    func chechScientificDegreeLabel() -> String {
+        if doctor.scientificDegreeLabel == "нет" {
+            return "Нет данных об ученой степени"
+        } else {
+            return doctor.scientificDegreeLabel.capitalizedSentence
+        }
     }
 }
 

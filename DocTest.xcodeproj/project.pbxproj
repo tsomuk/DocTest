@@ -12,7 +12,8 @@
 		1152849A2BAE0876001FF346 /* PriceSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284992BAE0876001FF346 /* PriceSegment.swift */; };
 		1152849D2BAE090E001FF346 /* TitleWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152849C2BAE090E001FF346 /* TitleWithImage.swift */; };
 		1152849F2BAE0951001FF346 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152849E2BAE0951001FF346 /* PriceView.swift */; };
-		115284A22BAE1BFD001FF346 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284A12BAE1BFD001FF346 /* String + Extension.swift */; };
+		115284A22BAE1BFD001FF346 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284A12BAE1BFD001FF346 /* Int + Extension.swift */; };
+		116F87DE2BAE31660043BAD4 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F87DD2BAE31660043BAD4 /* String + Extension.swift */; };
 		11B6144C2BADAFF900DF1529 /* DoctorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B6144B2BADAFF900DF1529 /* DoctorListViewModel.swift */; };
 		11F330FB2BA5B9DC00AC058E /* DocTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F330FA2BA5B9DC00AC058E /* DocTestApp.swift */; };
 		11F330FD2BA5B9DC00AC058E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F330FC2BA5B9DC00AC058E /* ContentView.swift */; };
@@ -37,7 +38,8 @@
 		115284992BAE0876001FF346 /* PriceSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSegment.swift; sourceTree = "<group>"; };
 		1152849C2BAE090E001FF346 /* TitleWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithImage.swift; sourceTree = "<group>"; };
 		1152849E2BAE0951001FF346 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
-		115284A12BAE1BFD001FF346 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		115284A12BAE1BFD001FF346 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
+		116F87DD2BAE31660043BAD4 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		11B6144B2BADAFF900DF1529 /* DoctorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListViewModel.swift; sourceTree = "<group>"; };
 		11F330F72BA5B9DC00AC058E /* DocTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F330FA2BA5B9DC00AC058E /* DocTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocTestApp.swift; sourceTree = "<group>"; };
@@ -106,7 +108,8 @@
 		115284A02BAE19D7001FF346 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				115284A12BAE1BFD001FF346 /* String + Extension.swift */,
+				115284A12BAE1BFD001FF346 /* Int + Extension.swift */,
+				116F87DD2BAE31660043BAD4 /* String + Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -305,7 +308,8 @@
 			files = (
 				115284952BADF432001FF346 /* DoctorListBuilder.swift in Sources */,
 				11F3311D2BA5D89600AC058E /* VisitView.swift in Sources */,
-				115284A22BAE1BFD001FF346 /* String + Extension.swift in Sources */,
+				116F87DE2BAE31660043BAD4 /* String + Extension.swift in Sources */,
+				115284A22BAE1BFD001FF346 /* Int + Extension.swift in Sources */,
 				11F3312A2BA6DA5400AC058E /* Doctor.swift in Sources */,
 				11B6144C2BADAFF900DF1529 /* DoctorListViewModel.swift in Sources */,
 				11F331212BA5D8B600AC058E /* ProfileView.swift in Sources */,
