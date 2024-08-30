@@ -18,24 +18,24 @@ struct PriceSegment: View {
             Text(title)
                 .bold()
             
-            RoundedRectangle(cornerRadius: 8)
-                .frame(width: UIScreen.main.bounds.width - 32, height: 56)
-                .foregroundColor(.white)
-                .overlay {
-                    HStack {
-                        Text(time)
-                        Spacer()
-                        Text(price)
-                            .bold()
-                    }
-                    .padding(.horizontal, 16)
-                    .foregroundStyle(.black)
-                }
+            HStack {
+                Text(time)
+                Spacer()
+                Text(price)
+                    .bold()
+            }
+            .padding(.horizontal,16)
+            .frame(maxWidth: .infinity, maxHeight: 56)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
         }
         .padding(.horizontal, 16)
     }
 }
 
 #Preview {
-    PriceSegment(title: "Прием", time: "30 мин", price: "500 ₽")
+    ZStack {
+        Color.gray.opacity(0.3).ignoresSafeArea()
+        PriceSegment(title: "Прием", time: "30 мин", price: "500 ₽")
+    }
 }

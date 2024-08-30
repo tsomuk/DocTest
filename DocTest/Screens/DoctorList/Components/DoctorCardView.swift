@@ -50,17 +50,19 @@ struct DoctorCardView: View {
                         HStack {
                             Text("Педиатр" + " •")
                             Text(doctor.seniority.getYearsStringCard())
-                        } .foregroundColor(.gray)
-                            .font(.system(size: 14))
+                        }
+                        .foregroundColor(.gray)
+                        .font(.system(size: 14))
                         
                         Text("от \(findMinimumPrice() ?? 0) ₽")
                             .font(.system(size: 16, weight: .semibold))
                             
                     }
                     Spacer()
-                    Button(action: {
+                    
+                    Button {
                         isFavorite.toggle()
-                    }) {
+                    } label: {
                         Image(systemName: isFavorite ? "heart.fill" : "heart")
                             .resizable()
                             .frame(width: 24, height: 20)

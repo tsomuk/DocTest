@@ -12,22 +12,26 @@ struct DoctorListView: View {
     @StateObject var viewModel: DoctorListViewModel
     
     var body: some View {
+        NavigationStack {
         ZStack {
             Color.background.edgesIgnoringSafeArea(.all)
-            ScrollView {
-                VStack(spacing: 16) {
-                    ForEach((0..<viewModel.numberOfCards), id: \.self) { item in
-                        DoctorCardView(doctor: viewModel.getDoctor(item)!)
+                ScrollView {
+                    VStack(spacing: 16) {
+                        ForEach((0..<viewModel.numberOfCards), id: \.self) { item in
+                            DoctorCardView(doctor: viewModel.getDoctor(item)!)
+                        }
                     }
                 }
+                .onAppear {
+                    viewModel.getData()
             }
-            .onAppear {
-                viewModel.getData()
             }
+        .navigationTitle("Педиатры")
+        .toolbarTitleDisplayMode(.inline)
         }
     }
 }
 
-//#Preview {
-//    DoctorListView()
-//}
+#Preview {
+    DoctorListView(viewModel: DoctorListViewModel())
+}

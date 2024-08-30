@@ -13,7 +13,7 @@ class NetworkService {
     private init()  {}
     
     private func createURL() -> URL? {
-        let urlString = "https://api.jsonbin.io/v3/b/655b754e0574da7622c94aa4"
+        let urlString = "https://raw.githubusercontent.com/salfa-ru/test_iOS_akatosphere/main/test.json"
         let url = URL(string: urlString)
         return url
     }
