@@ -12,12 +12,15 @@ struct DoctorCardView: View {
     @State var doctor: User
     @State var isFavorite = false
     
+    let backgroundGradient = LinearGradient(
+        colors: [Color.red, Color.blue],
+        startPoint: .top, endPoint: .bottom)
+    
+    
+    
+    
     var body: some View {
         
-        ZStack{
-            RoundedRectangle(cornerRadius: 15)
-                .fill(Color.white)
-                .frame(width: UIScreen.main.bounds.width - 32, height: 225)
             VStack(spacing: 8) {
                 HStack(alignment: .top) {
                     AsyncImage(url: URL(string: doctor.avatar ?? "")) { phase in
@@ -67,14 +70,20 @@ struct DoctorCardView: View {
                     }
                 } .padding(.horizontal, 32)
                 
-                NavigationLink(destination: DoctorDetailView(doctor: doctor)
-                    .toolbarRole(.editor))
+                NavigationLink(destination: DoctorDetailView(doctor: doctor).toolbarRole(.editor))
                 {
                     DefaultButtonView(buttonTitle: "Записаться", extraPadding: 32)
                 }
-            }
-        }
+
+            } 
+            .frame(maxWidth: .infinity)
+            .frame(height: 225)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .padding(.horizontal, 16)
+            .shadow(radius: 40)
     }
+       
     
     func findMinimumPrice() -> Int? {
         [doctor.hospitalPrice, doctor.textChatPrice, doctor.videoChatPrice].min()

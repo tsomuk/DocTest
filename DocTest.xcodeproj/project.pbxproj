@@ -117,6 +117,19 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		116EA1582C00982C00C6EFCA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				11F331132BA5D63B00AC058E /* DoctorList */,
+				115284962BADFF1D001FF346 /* DoctorDetail */,
+				115284972BADFF29001FF346 /* DoctorPrices */,
+				11F331142BA5D68400AC058E /* Visits */,
+				11F331152BA5D68F00AC058E /* Chat */,
+				11F331162BA5D69D00AC058E /* Profile */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		11F330EE2BA5B9DC00AC058E = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +151,8 @@
 			children = (
 				11F330FA2BA5B9DC00AC058E /* DocTestApp.swift */,
 				11F330FC2BA5B9DC00AC058E /* ContentView.swift */,
-				11F331132BA5D63B00AC058E /* DoctorList */,
-				115284962BADFF1D001FF346 /* DoctorDetail */,
-				115284972BADFF29001FF346 /* DoctorPrices */,
-				11F331142BA5D68400AC058E /* Visits */,
-				11F331152BA5D68F00AC058E /* Chat */,
-				11F331162BA5D69D00AC058E /* Profile */,
+				11F331172BA5D71E00AC058E /* Model */,
+				116EA1582C00982C00C6EFCA /* Screens */,
 				11F331102BA5D16200AC058E /* Service */,
 				115284A02BAE19D7001FF346 /* Helper */,
 				11F331002BA5B9DD00AC058E /* Preview Content */,
@@ -162,8 +171,8 @@
 		11F331102BA5D16200AC058E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				11F331112BA5D19200AC058E /* NetworkService.swift */,
 				11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */,
+				11F331112BA5D19200AC058E /* NetworkService.swift */,
 				11F330FE2BA5B9DD00AC058E /* Assets.xcassets */,
 			);
 			path = Service;
@@ -172,9 +181,9 @@
 		11F331132BA5D63B00AC058E /* DoctorList */ = {
 			isa = PBXGroup;
 			children = (
-				11F331172BA5D71E00AC058E /* Model */,
-				11F331182BA5D72600AC058E /* View */,
-				11F331192BA5D72C00AC058E /* ViewModel */,
+				11F3311A2BA5D88B00AC058E /* DoctorListView.swift */,
+				11B6144B2BADAFF900DF1529 /* DoctorListViewModel.swift */,
+				11F331242BA5F88E00AC058E /* Components */,
 			);
 			path = DoctorList;
 			sourceTree = "<group>";
@@ -210,23 +219,6 @@
 				115284942BADF432001FF346 /* DoctorListBuilder.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		11F331182BA5D72600AC058E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				11F3311A2BA5D88B00AC058E /* DoctorListView.swift */,
-				11F331242BA5F88E00AC058E /* Components */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		11F331192BA5D72C00AC058E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				11B6144B2BADAFF900DF1529 /* DoctorListViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		11F331242BA5F88E00AC058E /* Components */ = {

@@ -11,6 +11,7 @@ struct DoctorDetailView: View {
     
     @State var doctor: User
     
+    
     var body: some View {
         
         ZStack(content: {
@@ -85,3 +86,6 @@ struct DoctorDetailView: View {
 #Preview {
     DoctorDetailView(doctor: DoctorMock.mrKim)
 }
+
+
+

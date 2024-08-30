@@ -29,6 +29,7 @@ struct PriceSegment: View {
                             .bold()
                     }
                     .padding(.horizontal, 16)
+                    .foregroundStyle(.black)
                 }
         }
         .padding(.horizontal, 16)

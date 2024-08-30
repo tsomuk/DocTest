@@ -15,7 +15,7 @@ struct DoctorMock {
         slug: "tsedrik_Andrej_2c8ca",
         firstName: "Айболит",
         patronymic: "Докторович",
-        lastName: "Ким",
+        lastName: "Пилюлькин",
         gender: "",
         genderLabel: nil,
         specialization: [],
