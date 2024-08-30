@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TabBarView: View {
     
     let tabBarAppeareance = UITabBarAppearance()
     
@@ -19,27 +19,23 @@ struct ContentView: View {
                 Group {
                     DoctorListBuilder.create()
                         .tabItem {
-                            Image(systemName: "house.fill")
-                            Text("Главная")
+                            Label("Главная", systemImage: "house.fill")
                         }
                         .tag(0)
                     
-                    VisitView()
+                    Image(systemName: "calendar.badge.plus").font(.largeTitle)
                         .tabItem {
-                            Image(systemName: "calendar.badge.plus")
-                            Text("Приемы")
+                            Label("Приемы", systemImage: "calendar.badge.plus")
                         }
                         .tag(1)
-                    ChatView()
+                    Image(systemName: "message.badge.filled.fill").font(.largeTitle)
                         .tabItem {
-                            Image(systemName: "message.badge.filled.fill")
-                            Text("Чат")
+                            Label("Чат", systemImage: "message.badge.filled.fill")
                         }
                         .tag(2)
-                    ProfileView()
+                    Image(systemName: "person.fill").font(.largeTitle)
                         .tabItem {
-                            Image(systemName: "person.fill")
-                            Text("Профиль")
+                            Label("Профиль", systemImage: "person.fill")
                         }
                         .tag(3)
                 }
@@ -52,5 +48,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TabBarView()
 }

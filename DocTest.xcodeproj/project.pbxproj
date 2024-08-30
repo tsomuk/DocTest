@@ -17,16 +17,13 @@
 		116F87DE2BAE31660043BAD4 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F87DD2BAE31660043BAD4 /* String + Extension.swift */; };
 		11B6144C2BADAFF900DF1529 /* DoctorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B6144B2BADAFF900DF1529 /* DoctorListViewModel.swift */; };
 		11F330FB2BA5B9DC00AC058E /* DocTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F330FA2BA5B9DC00AC058E /* DocTestApp.swift */; };
-		11F330FD2BA5B9DC00AC058E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F330FC2BA5B9DC00AC058E /* ContentView.swift */; };
+		11F330FD2BA5B9DC00AC058E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F330FC2BA5B9DC00AC058E /* TabBarView.swift */; };
 		11F330FF2BA5B9DD00AC058E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F330FE2BA5B9DD00AC058E /* Assets.xcassets */; };
 		11F331022BA5B9DD00AC058E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F331012BA5B9DD00AC058E /* Preview Assets.xcassets */; };
 		11F331092BA5CDAD00AC058E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */; };
 		11F3310F2BA5CE5A00AC058E /* DoctorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3310E2BA5CE5A00AC058E /* DoctorCardView.swift */; };
 		11F331122BA5D19200AC058E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331112BA5D19200AC058E /* NetworkService.swift */; };
 		11F3311B2BA5D88B00AC058E /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3311A2BA5D88B00AC058E /* DoctorListView.swift */; };
-		11F3311D2BA5D89600AC058E /* VisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3311C2BA5D89600AC058E /* VisitView.swift */; };
-		11F3311F2BA5D8AE00AC058E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3311E2BA5D8AE00AC058E /* ChatView.swift */; };
-		11F331212BA5D8B600AC058E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331202BA5D8B600AC058E /* ProfileView.swift */; };
 		11F331262BA6072F00AC058E /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331252BA6072F00AC058E /* DoctorDetailView.swift */; };
 		11F331282BA624E300AC058E /* AllPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331272BA624E300AC058E /* AllPriceView.swift */; };
 		11F3312A2BA6DA5400AC058E /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331292BA6DA5400AC058E /* Doctor.swift */; };
@@ -45,16 +42,13 @@
 		11B6144B2BADAFF900DF1529 /* DoctorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListViewModel.swift; sourceTree = "<group>"; };
 		11F330F72BA5B9DC00AC058E /* DocTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F330FA2BA5B9DC00AC058E /* DocTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocTestApp.swift; sourceTree = "<group>"; };
-		11F330FC2BA5B9DC00AC058E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		11F330FC2BA5B9DC00AC058E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		11F330FE2BA5B9DD00AC058E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F331012BA5B9DD00AC058E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		11F3310E2BA5CE5A00AC058E /* DoctorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCardView.swift; sourceTree = "<group>"; };
 		11F331112BA5D19200AC058E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		11F3311A2BA5D88B00AC058E /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
-		11F3311C2BA5D89600AC058E /* VisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitView.swift; sourceTree = "<group>"; };
-		11F3311E2BA5D8AE00AC058E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		11F331202BA5D8B600AC058E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		11F331252BA6072F00AC058E /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
 		11F331272BA624E300AC058E /* AllPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPriceView.swift; sourceTree = "<group>"; };
 		11F331292BA6DA5400AC058E /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
@@ -123,9 +117,6 @@
 				11F331132BA5D63B00AC058E /* DoctorList */,
 				115284962BADFF1D001FF346 /* DoctorDetail */,
 				115284972BADFF29001FF346 /* DoctorPrices */,
-				11F331142BA5D68400AC058E /* Visits */,
-				11F331152BA5D68F00AC058E /* Chat */,
-				11F331162BA5D69D00AC058E /* Profile */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -150,7 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				11F330FA2BA5B9DC00AC058E /* DocTestApp.swift */,
-				11F330FC2BA5B9DC00AC058E /* ContentView.swift */,
+				11F330FC2BA5B9DC00AC058E /* TabBarView.swift */,
+				11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */,
 				11F331172BA5D71E00AC058E /* Model */,
 				116EA1582C00982C00C6EFCA /* Screens */,
 				11F331102BA5D16200AC058E /* Service */,
@@ -171,7 +163,6 @@
 		11F331102BA5D16200AC058E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				11F331082BA5CDAD00AC058E /* LaunchScreenView.swift */,
 				11F331112BA5D19200AC058E /* NetworkService.swift */,
 				11F330FE2BA5B9DD00AC058E /* Assets.xcassets */,
 			);
@@ -186,30 +177,6 @@
 				11F331242BA5F88E00AC058E /* Components */,
 			);
 			path = DoctorList;
-			sourceTree = "<group>";
-		};
-		11F331142BA5D68400AC058E /* Visits */ = {
-			isa = PBXGroup;
-			children = (
-				11F3311C2BA5D89600AC058E /* VisitView.swift */,
-			);
-			path = Visits;
-			sourceTree = "<group>";
-		};
-		11F331152BA5D68F00AC058E /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				11F3311E2BA5D8AE00AC058E /* ChatView.swift */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		11F331162BA5D69D00AC058E /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				11F331202BA5D8B600AC058E /* ProfileView.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		11F331172BA5D71E00AC058E /* Model */ = {
@@ -302,20 +269,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				115284952BADF432001FF346 /* DoctorListBuilder.swift in Sources */,
-				11F3311D2BA5D89600AC058E /* VisitView.swift in Sources */,
 				1102D5202BAE38B20053B388 /* DoctorMock.swift in Sources */,
 				116F87DE2BAE31660043BAD4 /* String + Extension.swift in Sources */,
 				115284A22BAE1BFD001FF346 /* Int + Extension.swift in Sources */,
 				11F3312A2BA6DA5400AC058E /* Doctor.swift in Sources */,
 				11B6144C2BADAFF900DF1529 /* DoctorListViewModel.swift in Sources */,
-				11F331212BA5D8B600AC058E /* ProfileView.swift in Sources */,
 				11F3311B2BA5D88B00AC058E /* DoctorListView.swift in Sources */,
 				11F331282BA624E300AC058E /* AllPriceView.swift in Sources */,
 				11F331122BA5D19200AC058E /* NetworkService.swift in Sources */,
 				1152849D2BAE090E001FF346 /* TitleWithImage.swift in Sources */,
-				11F330FD2BA5B9DC00AC058E /* ContentView.swift in Sources */,
+				11F330FD2BA5B9DC00AC058E /* TabBarView.swift in Sources */,
 				114F0C792BA7A68000CB8AAD /* RatingView.swift in Sources */,
-				11F3311F2BA5D8AE00AC058E /* ChatView.swift in Sources */,
 				11F330FB2BA5B9DC00AC058E /* DocTestApp.swift in Sources */,
 				11F331092BA5CDAD00AC058E /* LaunchScreenView.swift in Sources */,
 				11F331262BA6072F00AC058E /* DoctorDetailView.swift in Sources */,
