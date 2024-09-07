@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PriceSegment: View {
+struct PriceSegmentView: View {
     
     let title: String
     let time: String
@@ -36,6 +36,6 @@ struct PriceSegment: View {
 #Preview {
     ZStack {
         Color.gray.opacity(0.3).ignoresSafeArea()
-        PriceSegment(title: "Прием", time: "30 мин", price: "500 ₽")
+        PriceSegmentView(title: "Прием", time: "30 мин", price: "500 ₽")
     }
 }

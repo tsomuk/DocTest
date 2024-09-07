@@ -8,18 +8,23 @@
 import SwiftUI
 
 
-struct DefaultButtonView: View {
+struct DoctorButtonLabel: View {
     
     var buttonTitle: String
-    var extraPadding: CGFloat
     
     var body: some View {
         Text(buttonTitle)
             .foregroundColor(.white)
             .fontWeight(.bold)
-            .frame(width: UIScreen.main.bounds.width - 32 - extraPadding, height: 60)
+            .frame(height: 60)
+            .frame(maxWidth: .infinity)
             .background(.accent)
             .cornerRadius(8)
-            .padding(.horizontal)
+            
     }
+}
+
+#Preview {
+    DoctorButtonLabel(buttonTitle: "Test title")
+        .padding(.horizontal)
 }
