@@ -9,8 +9,13 @@ import SwiftUI
 
 struct TabBarView: View {
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
+    
+    
     var body: some View {
-        TabView {
+        return TabView {
             DoctorListView()
                 .tabItem {
                     Label("Главная", systemImage: "house.fill")
