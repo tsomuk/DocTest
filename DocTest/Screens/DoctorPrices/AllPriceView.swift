@@ -27,5 +27,5 @@ struct AllPriceView: View {
 }
 
 #Preview {
-    AllPriceView(doctor: Doctor.mockDoc)
+    AllPriceView(doctor: Responce.mockDoctor)
 }

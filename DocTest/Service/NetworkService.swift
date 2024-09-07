@@ -18,10 +18,10 @@ class NetworkService {
         return url
     }
 
-    func fetchData() async throws -> Doctor {
+    func fetchData() async throws -> Responce {
         guard let url = createURL() else { throw NetworkingError.badURL }
         let response = try await URLSession.shared.data(from: url)
-        let result = try JSONDecoder().decode(Doctor.self, from: response.0)
+        let result = try JSONDecoder().decode(Responce.self, from: response.0)
         return result
     }
 }

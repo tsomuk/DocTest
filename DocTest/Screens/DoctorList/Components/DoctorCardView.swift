@@ -19,7 +19,10 @@ struct DoctorCardView: View {
                     AsyncImage(url: URL(string: doctor.avatar ?? "")) { phase in
                         switch phase {
                         case .empty:
-                            ProgressView()
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundStyle(.accent)
                         case .success(let image):
                             image
                                 .resizable()
@@ -76,8 +79,6 @@ struct DoctorCardView: View {
             .frame(height: 225)
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-            .padding(.horizontal, 16)
-            .shadow(color: .black.opacity(0.3), radius: 20, y: 10)
     }
        
     
@@ -88,5 +89,8 @@ struct DoctorCardView: View {
 }
 
 #Preview {
-    DoctorCardView(doctor: Doctor.mockDoc)
+    DoctorCardView(doctor: Responce.mockDoctor)
+        .shadow(color: .black.opacity(0.3), radius: 20, y: 10)
+        .padding(.horizontal, 16)
+
 }

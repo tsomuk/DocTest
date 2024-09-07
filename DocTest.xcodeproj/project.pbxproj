@@ -24,7 +24,7 @@
 		11F3311B2BA5D88B00AC058E /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3311A2BA5D88B00AC058E /* DoctorListView.swift */; };
 		11F331262BA6072F00AC058E /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331252BA6072F00AC058E /* DoctorDetailView.swift */; };
 		11F331282BA624E300AC058E /* AllPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331272BA624E300AC058E /* AllPriceView.swift */; };
-		11F3312A2BA6DA5400AC058E /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331292BA6DA5400AC058E /* Doctor.swift */; };
+		11F3312A2BA6DA5400AC058E /* Responce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331292BA6DA5400AC058E /* Responce.swift */; };
 		11FE659F2BAB04AF002F680F /* DoctorButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE659E2BAB04AF002F680F /* DoctorButtonLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		11F3311A2BA5D88B00AC058E /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
 		11F331252BA6072F00AC058E /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
 		11F331272BA624E300AC058E /* AllPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPriceView.swift; sourceTree = "<group>"; };
-		11F331292BA6DA5400AC058E /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		11F331292BA6DA5400AC058E /* Responce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responce.swift; sourceTree = "<group>"; };
 		11FE659E2BAB04AF002F680F /* DoctorButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorButtonLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,7 +177,7 @@
 		11F331172BA5D71E00AC058E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				11F331292BA6DA5400AC058E /* Doctor.swift */,
+				11F331292BA6DA5400AC058E /* Responce.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 			files = (
 				116F87DE2BAE31660043BAD4 /* String + Extension.swift in Sources */,
 				115284A22BAE1BFD001FF346 /* Int + Extension.swift in Sources */,
-				11F3312A2BA6DA5400AC058E /* Doctor.swift in Sources */,
+				11F3312A2BA6DA5400AC058E /* Responce.swift in Sources */,
 				11B6144C2BADAFF900DF1529 /* DoctorListViewModel.swift in Sources */,
 				11F3311B2BA5D88B00AC058E /* DoctorListView.swift in Sources */,
 				11F331282BA624E300AC058E /* AllPriceView.swift in Sources */,
