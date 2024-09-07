@@ -26,3 +26,7 @@
  - Использовать представленный API для получения данных о врачах.
  - Дизайн приложения должен соответствовать представленному прототипу в Figma.
  - Обеспечить качественную обработку ошибок и пустых состояний.
+
+
+### [Figma](https://www.figma.com/file/Kwic8nnnhxLYztOswqQWix/Test?type=design&node-id=4-19732&mode=design&t=DWjwU9bLkUKGnM6F-0)
+### [API](https://raw.githubusercontent.com/salfa-ru/test_iOS_akatosphere/main/test.json)
