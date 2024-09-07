@@ -29,7 +29,6 @@ struct PriceSegmentView: View {
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 8))
         }
-        .padding(.horizontal, 16)
     }
 }
 
@@ -37,5 +36,6 @@ struct PriceSegmentView: View {
     ZStack {
         Color.gray.opacity(0.3).ignoresSafeArea()
         PriceSegmentView(title: "Прием", time: "30 мин", price: "500 ₽")
+            .padding(.horizontal, 16)
     }
 }

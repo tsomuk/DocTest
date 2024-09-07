@@ -49,15 +49,14 @@ struct DoctorListView: View {
                     VStack(spacing: 16) {
                         ForEach(searchedDoctor) { doctor in
                             DoctorCardView(doctor: doctor)
+                            
                         }
                     }
-                }
-                .onAppear {
-                    viewModel.getData()
                 }
                 .padding(.horizontal, 16)
             }
             .navigationTitle("Педиатры")
+            .scrollIndicators(.hidden)
             .toolbarTitleDisplayMode(.inline)
             .searchable(text: $searchTerm, prompt: "Поиск")
         }

@@ -19,9 +19,11 @@ struct AllPriceView: View {
                 PriceSegmentView(title: "Видеоконсультация", time: "30 мин", price: "\(doctor.videoChatPrice) ₽")
                 PriceSegmentView(title: "Чат с врачом", time: "30 мин", price: "\(doctor.textChatPrice) ₽")
                 PriceSegmentView(title: "Приём в клинике", time: "В клинике", price: "\(doctor.hospitalPrice) ₽")
+                PriceSegmentView(title: "Вызов на дом", time: "60 мин", price: "\(doctor.homePrice) ₽")
                 Spacer()
-            } .padding(16)
-                .navigationBarTitle("Стоимость услуг", displayMode: .inline)
+            }
+            .padding(16)
+            .navigationBarTitle("Стоимость услуг", displayMode: .inline)
         }
     }
 }
