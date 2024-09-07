@@ -11,7 +11,7 @@ struct TabBarView: View {
     
     var body: some View {
         TabView {
-            DoctorListBuilder.create()
+            DoctorListView()
                 .tabItem {
                     Label("Главная", systemImage: "house.fill")
                 }

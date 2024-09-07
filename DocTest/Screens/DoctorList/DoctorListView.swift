@@ -16,8 +16,8 @@ struct DoctorListView: View {
                 ScrollView {
                     VStack(spacing: 16) {
 
-                        ForEach(viewModel.doctorDataBase) { doctor in
-                            DoctorCardView(doctor: doctor)
+                        ForEach(1..<10) { doctor in
+                            DoctorCardView(doctor: Doctor.mockDoc)
                         }
                     }
                 }

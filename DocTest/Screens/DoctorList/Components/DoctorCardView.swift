@@ -88,5 +88,5 @@ struct DoctorCardView: View {
 }
 
 #Preview {
-    DoctorCardView(doctor: DoctorMock.mrKim)
+    DoctorCardView(doctor: Doctor.mockDoc)
 }
