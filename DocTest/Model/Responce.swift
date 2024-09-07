@@ -7,13 +7,15 @@
 
 import Foundation
 
-// MARK: - Doctor
-struct Doctor: Codable {
-    let record: Record
-}
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let responce = try? JSONDecoder().decode(Responce.self, from: jsonData)
 
-// MARK: - Record
-struct Record: Codable {
+import Foundation
+
+// MARK: - Responce
+struct Responce: Codable {
     let count: Int
     let previous: JSONNull?
     let message: String
@@ -30,7 +32,7 @@ struct DataClass: Codable {
 struct User: Codable, Identifiable {
     let id, slug, firstName, patronymic: String
     let lastName, gender: String
-    let genderLabel: GenderLabel?
+    let genderLabel: GenderLabel
     let specialization: [Specialization]
     let ratings: [Rating]
     let ratingsRating: Double
@@ -43,12 +45,14 @@ struct User: Codable, Identifiable {
     let higherEducation: [HigherEducation]
     let workExpirience: [WorkExpirience]
     let advancedTraining: [AdvancedTraining]
-    let scientificDegreeLabel: String
     let rank: Int
     let rankLabel: String
+    let scientificDegree: Int
+    let scientificDegreeLabel: ScientificDegreeLabel
     let category: Int
+    let categoryLabel: CategoryLabel
     let isFavorite: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id, slug
         case firstName = "first_name"
@@ -70,10 +74,12 @@ struct User: Codable, Identifiable {
         case higherEducation = "higher_education"
         case workExpirience = "work_expirience"
         case advancedTraining = "advanced_training"
-        case scientificDegreeLabel = "scientific_degree_label"
         case rank
         case rankLabel = "rank_label"
+        case scientificDegree = "scientific_degree"
+        case scientificDegreeLabel = "scientific_degree_label"
         case category
+        case categoryLabel = "category_label"
         case isFavorite = "is_favorite"
     }
 }
@@ -85,7 +91,7 @@ struct AdvancedTraining: Codable {
     let endDate: Int
     let file: String
     let isModerated: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id, organization, position
         case endDate = "end_date"
@@ -94,6 +100,12 @@ struct AdvancedTraining: Codable {
     }
 }
 
+enum CategoryLabel: String, Codable {
+    case вторая = "вторая"
+    case высшая = "высшая"
+    case нет = "нет"
+    case первая = "первая"
+}
 
 // MARK: - EducationTypeLabel
 struct EducationTypeLabel: Codable {
@@ -117,7 +129,7 @@ struct HigherEducation: Codable {
     let university, specialization, qualification: String
     let startDate, endDate: Int
     let untilNow, isModerated: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id, university, specialization, qualification
         case startDate = "start_date"
@@ -130,7 +142,22 @@ struct HigherEducation: Codable {
 // MARK: - Rating
 struct Rating: Codable {
     let id: Int
+    let name: Name
     let value: Double
+}
+
+enum Name: String, Codable {
+    case внимательность = "Внимательность"
+    case ответственность = "Ответственность"
+    case профессионализм = "Профессионализм"
+    case пунктуальность = "Пунктуальность"
+    case рейтинг = "Рейтинг"
+}
+
+enum ScientificDegreeLabel: String, Codable {
+    case докторМедицинскихНаук = "доктор медицинских наук"
+    case кандидатМедицинскихНаук = "кандидат медицинских наук"
+    case нет = "нет"
 }
 
 // MARK: - Specialization
@@ -138,7 +165,7 @@ struct Specialization: Codable {
     let id: Int
     let name: String
     let isModerated: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id, name
         case isModerated = "is_moderated"
@@ -152,7 +179,7 @@ struct WorkExpirience: Codable {
     let startDate: Int
     let endDate: Int?
     let untilNow, isModerated: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id, organization, position
         case startDate = "start_date"
@@ -165,39 +192,41 @@ struct WorkExpirience: Codable {
 // MARK: - Encode/decode helpers
 
 class JSONNull: Codable, Hashable {
-    
+
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
+            return true
     }
-    
+
     public var hashValue: Int {
-        return 0
+            return 0
     }
-    
+
     public init() {}
-    
+
     public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
+            let container = try decoder.singleValueContainer()
+            if !container.decodeNil() {
+                    throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            }
     }
-    
+
     public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
+            var container = encoder.singleValueContainer()
+            try container.encodeNil()
     }
 }
 
-extension Doctor {
-    static let mockDoc: User = User(
+
+extension Responce {
+        
+    static let mockDoctor: User = .init(
         id: "4b86d20f-aa71-4f10-acee-0f55f0b2c8ca",
         slug: "tsedrik_Andrej_2c8ca",
         firstName: "Айболит",
         patronymic: "Докторович",
         lastName: "Пилюлькин",
-        gender: "",
-        genderLabel: nil,
+        gender: "муж",
+        genderLabel: .женщина,
         specialization: [],
         ratings: [],
         ratingsRating: 4.3,
@@ -205,7 +234,7 @@ extension Doctor {
         textChatPrice: 200,
         videoChatPrice: 300,
         homePrice: 400,
-        hospitalPrice: 700,
+        hospitalPrice: 1500,
         avatar: "https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.jpg?s=1024x1024&w=is&k=20&c=9dGjXLWwRAimcACr0jOZDmmLcH0P29fi2ibKunQ6xpo=",
         nearestReceptionTime: nil,
         freeReceptionTime: [],
@@ -213,10 +242,12 @@ extension Doctor {
         higherEducation: [],
         workExpirience: [],
         advancedTraining: [],
-        scientificDegreeLabel: "доктор наук",
         rank: 4,
-        rankLabel: "2",
+        rankLabel: "доктор наук",
+        scientificDegree: 2,
+        scientificDegreeLabel: .докторМедицинскихНаук,
         category: 123,
+        categoryLabel: .вторая,
         isFavorite: true
     )
 }
