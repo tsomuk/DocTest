@@ -22,10 +22,8 @@ struct DoctorDetailView: View {
                         AsyncImage(url: URL(string: doctor.avatar ?? "")) { phase in
                             switch phase {
                             case .empty:
-                                Image(systemName: "person.circle.fill")
-                                    .resizable()
+                                ProgressView()
                                     .frame(width: 50, height: 50)
-                                    .foregroundStyle(.accent)
                             case .success(let image):
                                 image
                                     .resizable()
@@ -33,15 +31,18 @@ struct DoctorDetailView: View {
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(25)
                             default:
-                                EmptyView()
+                                Image(systemName: "person.circle.fill")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundStyle(.accent)
                             }
                         }
                     }
                     
                     Text("\(doctor.lastName)\n\(doctor.firstName) \(doctor.patronymic)")
-                        .bold()
                         .font(.system(size: 16, weight: .semibold))
-                } .padding(.horizontal, 16)
+                } 
+                .padding(.horizontal, 16)
                 
                 VStack(alignment: .leading, spacing: 10) {
                     TitleWithImage(title: doctor.seniority.getYearsStringDetail(), imageName: "clock")
@@ -62,7 +63,7 @@ struct DoctorDetailView: View {
                 Button(action: {
                     print("Make an apointment")
                 }) {
-                    DefaultButtonView(buttonTitle: "Записаться", extraPadding: 0)
+                    DoctorButtonLabel(buttonTitle: "Записаться")
                 }
             }
             .navigationBarTitle("Педиатр", displayMode: .inline)

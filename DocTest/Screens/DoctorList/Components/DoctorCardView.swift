@@ -12,13 +12,6 @@ struct DoctorCardView: View {
     @State var doctor: User
     @State var isFavorite = false
     
-    let backgroundGradient = LinearGradient(
-        colors: [Color.red, Color.blue],
-        startPoint: .top, endPoint: .bottom)
-    
-    
-    
-    
     var body: some View {
         
             VStack(spacing: 8) {
@@ -26,10 +19,7 @@ struct DoctorCardView: View {
                     AsyncImage(url: URL(string: doctor.avatar ?? "")) { phase in
                         switch phase {
                         case .empty:
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .foregroundStyle(.accent)
+                            ProgressView()
                         case .success(let image):
                             image
                                 .resizable()
@@ -37,9 +27,13 @@ struct DoctorCardView: View {
                                 .frame(width: 50, height: 50)
                                 .cornerRadius(25)
                          default:
-                            EmptyView()
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundStyle(.accent)
                         }
                     }
+                    
                     VStack(alignment: .leading, spacing: 8) {
                         Text("\(doctor.lastName)\n\(doctor.firstName) \(doctor.patronymic)")
                             .font(.system(size: 16, weight: .semibold))
@@ -47,17 +41,15 @@ struct DoctorCardView: View {
                         
                         RatingView(rating: doctor.rank)
                         
-                        HStack {
-                            Text("Педиатр" + " •")
-                            Text(doctor.seniority.getYearsStringCard())
-                        }
-                        .foregroundColor(.gray)
-                        .font(.system(size: 14))
+                        
+                        Text("Педиатр" + " •" + doctor.seniority.getYearsStringCard())
+                            .foregroundColor(.gray)
+                            .font(.system(size: 14))
                         
                         Text("от \(findMinimumPrice() ?? 0) ₽")
                             .font(.system(size: 16, weight: .semibold))
-                            
                     }
+                    
                     Spacer()
                     
                     Button {
@@ -70,20 +62,22 @@ struct DoctorCardView: View {
                             .foregroundStyle(.accent)
                             
                     }
-                } .padding(.horizontal, 32)
+                } 
+                .padding(.horizontal, 32)
                 
                 NavigationLink(destination: DoctorDetailView(doctor: doctor).toolbarRole(.editor))
                 {
-                    DefaultButtonView(buttonTitle: "Записаться", extraPadding: 32)
+                    DoctorButtonLabel(buttonTitle: "Записаться")
                 }
-
-            } 
+                .padding(.horizontal, 16)
+                
+            }
             .frame(maxWidth: .infinity)
             .frame(height: 225)
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .padding(.horizontal, 16)
-            .shadow(radius: 40)
+            .shadow(color: .black.opacity(0.3), radius: 20, y: 10)
     }
        
     

@@ -11,6 +11,12 @@ final class DoctorListViewModel: ObservableObject {
     
     @Published var numberOfCards: Int = 0
     @Published var doctor: Doctor? = nil
+    @Published var doctorDataBase : [User] = []
+    
+    init() {
+//        doctorDataBase = getData()
+    }
+    
     
     private let networkService = NetworkService.shared
     
@@ -18,12 +24,11 @@ final class DoctorListViewModel: ObservableObject {
         doctor?.record.data.users[index]
     }
     
-    func getData() {
+    func getData()  {
         Task {
             let result = try await networkService.fetchData()
             await MainActor.run {
-                self.doctor = result
-                self.numberOfCards = result.record.data.users.count
+                self .doctorDataBase = result.record.data.users
             }
         }
     }

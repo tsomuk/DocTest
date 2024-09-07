@@ -16,9 +16,9 @@ struct AllPriceView: View {
             Color.background.edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 24) {
-                PriceSegment(title: "Видеоконсультация", time: "30 мин", price: "\(doctor.videoChatPrice) ₽")
-                PriceSegment(title: "Чат с врачом", time: "30 мин", price: "\(doctor.textChatPrice) ₽")
-                PriceSegment(title: "Приём в клинике", time: "В клинике", price: "\(doctor.hospitalPrice) ₽")
+                PriceSegmentView(title: "Видеоконсультация", time: "30 мин", price: "\(doctor.videoChatPrice) ₽")
+                PriceSegmentView(title: "Чат с врачом", time: "30 мин", price: "\(doctor.textChatPrice) ₽")
+                PriceSegmentView(title: "Приём в клинике", time: "В клинике", price: "\(doctor.hospitalPrice) ₽")
                 Spacer()
             } .padding(16)
                 .navigationBarTitle("Стоимость услуг", displayMode: .inline)

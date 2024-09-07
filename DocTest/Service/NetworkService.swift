@@ -21,12 +21,11 @@ class NetworkService {
     func fetchData() async throws -> Doctor {
         guard let url = createURL() else { throw NetworkingError.badURL }
         let response = try await URLSession.shared.data(from: url)
-        let decoder = JSONDecoder()
-        let result = try decoder.decode(Doctor.self, from: response.0)
+        let result = try JSONDecoder().decode(Doctor.self, from: response.0)
         return result
     }
 }
 
 enum NetworkingError: Error {
-    case badURL, badRequest, badResponce, invalidData
+    case badURL, badRequest, badResponse, invalidData
 }

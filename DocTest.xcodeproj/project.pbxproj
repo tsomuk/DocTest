@@ -10,7 +10,7 @@
 		1102D5202BAE38B20053B388 /* DoctorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102D51F2BAE38B20053B388 /* DoctorMock.swift */; };
 		114F0C792BA7A68000CB8AAD /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F0C782BA7A68000CB8AAD /* RatingView.swift */; };
 		115284952BADF432001FF346 /* DoctorListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284942BADF432001FF346 /* DoctorListBuilder.swift */; };
-		1152849A2BAE0876001FF346 /* PriceSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284992BAE0876001FF346 /* PriceSegment.swift */; };
+		1152849A2BAE0876001FF346 /* PriceSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284992BAE0876001FF346 /* PriceSegmentView.swift */; };
 		1152849D2BAE090E001FF346 /* TitleWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152849C2BAE090E001FF346 /* TitleWithImage.swift */; };
 		1152849F2BAE0951001FF346 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152849E2BAE0951001FF346 /* PriceView.swift */; };
 		115284A22BAE1BFD001FF346 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115284A12BAE1BFD001FF346 /* Int + Extension.swift */; };
@@ -27,14 +27,14 @@
 		11F331262BA6072F00AC058E /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331252BA6072F00AC058E /* DoctorDetailView.swift */; };
 		11F331282BA624E300AC058E /* AllPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331272BA624E300AC058E /* AllPriceView.swift */; };
 		11F3312A2BA6DA5400AC058E /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F331292BA6DA5400AC058E /* Doctor.swift */; };
-		11FE659F2BAB04AF002F680F /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE659E2BAB04AF002F680F /* DefaultButtonView.swift */; };
+		11FE659F2BAB04AF002F680F /* DoctorButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE659E2BAB04AF002F680F /* DoctorButtonLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1102D51F2BAE38B20053B388 /* DoctorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMock.swift; sourceTree = "<group>"; };
 		114F0C782BA7A68000CB8AAD /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		115284942BADF432001FF346 /* DoctorListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListBuilder.swift; sourceTree = "<group>"; };
-		115284992BAE0876001FF346 /* PriceSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSegment.swift; sourceTree = "<group>"; };
+		115284992BAE0876001FF346 /* PriceSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSegmentView.swift; sourceTree = "<group>"; };
 		1152849C2BAE090E001FF346 /* TitleWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithImage.swift; sourceTree = "<group>"; };
 		1152849E2BAE0951001FF346 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		115284A12BAE1BFD001FF346 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		11F331252BA6072F00AC058E /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
 		11F331272BA624E300AC058E /* AllPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPriceView.swift; sourceTree = "<group>"; };
 		11F331292BA6DA5400AC058E /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
-		11FE659E2BAB04AF002F680F /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
+		11FE659E2BAB04AF002F680F /* DoctorButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorButtonLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		115284982BAE0866001FF346 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				115284992BAE0876001FF346 /* PriceSegment.swift */,
+				115284992BAE0876001FF346 /* PriceSegmentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -106,7 +106,6 @@
 			children = (
 				115284A12BAE1BFD001FF346 /* Int + Extension.swift */,
 				116F87DD2BAE31660043BAD4 /* String + Extension.swift */,
-				1102D51F2BAE38B20053B388 /* DoctorMock.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -183,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				11F331292BA6DA5400AC058E /* Doctor.swift */,
+				1102D51F2BAE38B20053B388 /* DoctorMock.swift */,
 				115284942BADF432001FF346 /* DoctorListBuilder.swift */,
 			);
 			path = Model;
@@ -193,7 +193,7 @@
 			children = (
 				11F3310E2BA5CE5A00AC058E /* DoctorCardView.swift */,
 				114F0C782BA7A68000CB8AAD /* RatingView.swift */,
-				11FE659E2BAB04AF002F680F /* DefaultButtonView.swift */,
+				11FE659E2BAB04AF002F680F /* DoctorButtonLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,8 +285,8 @@
 				11F331262BA6072F00AC058E /* DoctorDetailView.swift in Sources */,
 				1152849F2BAE0951001FF346 /* PriceView.swift in Sources */,
 				11F3310F2BA5CE5A00AC058E /* DoctorCardView.swift in Sources */,
-				1152849A2BAE0876001FF346 /* PriceSegment.swift in Sources */,
-				11FE659F2BAB04AF002F680F /* DefaultButtonView.swift in Sources */,
+				1152849A2BAE0876001FF346 /* PriceSegmentView.swift in Sources */,
+				11FE659F2BAB04AF002F680F /* DoctorButtonLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
