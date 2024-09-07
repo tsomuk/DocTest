@@ -13,27 +13,23 @@ struct PriceView: View {
     var price : Int
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 8)
-            .frame(
-                width: UIScreen.main.bounds.width - 32,
-                height: 60
-            )
-            .overlay(
-                HStack {
-                    Text(description)
-                    Spacer()
-                    Text("от \(price) ₽")
-                }
-                    .font(.system(size: 16, weight: .semibold))
-                    .padding(.horizontal, 16)
-                    .foregroundColor(.black)
-            )
-        
-            .foregroundColor(.white)
-            .fontWeight(.bold)
+        HStack {
+            Text(description)
+            Spacer()
+            Text("от \(price) ₽")
+        }
+        .padding()
+        .font(.system(size: 16, weight: .bold))
+        .frame(maxWidth: .infinity, maxHeight: 60)
+        .background(.white)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
 #Preview {
-    PriceView(description: "Прием", price: 800)
+    ZStack {
+        Color.background.ignoresSafeArea()
+        PriceView(description: "Прием", price: 800)
+            .padding()
+    }
 }
